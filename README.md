@@ -30,7 +30,7 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> [JavaScript DOCX Editor](ht
 
 - **Documentation:**   [Syncfusion® JavaScript (ES6) Word Processor - Documentation](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es6/overview?utm_source=github&utm_medium=listing&utm_campaign=github-javascript-es6-docx-editor-examples) 
 
-- **Online demo:**   [Syncfusion® JavaScript (ES6) Word Processor - Online demo](https://document.syncfusion.com/#/docx-editor-sdk?utm_source=github&utm_medium=listing&utm_campaign=github-javascript-es6-docx-editor-examples) 
+- **Online demo:**   [Syncfusion® JavaScript (ES6) Word Processor - Online demo](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/default.html?utm_source=github&utm_medium=listing&utm_campaign=github-javascript-es6-docx-editor-examples) 
 
 # Support and feedback
 
