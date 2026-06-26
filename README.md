@@ -1,4 +1,4 @@
-# Syncfusion&reg; JavaScript (ES6) DOCX Editor
+# Syncfusion&reg; JavaScript (ES6) DOCX Editor (Document Editor)
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor?utm_source=github&utm_medium=github&utm_campaign=github-javascript-es6-docx-editor-examples) is a feature-rich, user-interactive component that enables creating, editing, viewing, and printing Word documents with advanced formatting, editing capabilities, and broad support for document import and export formats. 
 
@@ -26,11 +26,11 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> [JavaScript DOCX Editor](ht
 
 # Resources
 
-- **Product page:**   [Syncfusion® JavaScript (ES6) Word Processor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor?utm_source=github&utm_medium=listing&utm_campaign=github-javascript-es6-docx-editor-examples) 
+- **Product page:**   [Syncfusion® JavaScript (ES6) DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor?utm_source=github&utm_medium=listing&utm_campaign=github-javascript-es6-docx-editor-examples) 
 
-- **Documentation:**   [Syncfusion® JavaScript (ES6) Word Processor - Documentation](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es6/overview?utm_source=github&utm_medium=listing&utm_campaign=github-javascript-es6-docx-editor-examples) 
+- **Documentation:**   [Syncfusion® JavaScript (ES6) DOCX Editor - Documentation](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es6/overview?utm_source=github&utm_medium=listing&utm_campaign=github-javascript-es6-docx-editor-examples) 
 
-- **Online demo:**   [Syncfusion® JavaScript (ES6) Word Processor - Online demo](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/default.html?utm_source=github&utm_medium=listing&utm_campaign=github-javascript-es6-docx-editor-examples) 
+- **Online demo:**   [Syncfusion® JavaScript (ES6) DOCX Editor - Online demo](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/default.html?utm_source=github&utm_medium=listing&utm_campaign=github-javascript-es6-docx-editor-examples) 
 
 # Support and feedback
 
