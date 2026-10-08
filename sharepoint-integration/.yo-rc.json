@@ -1,0 +1,19 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "useGulp": false,
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.23.3",
+    "sdksVersions": {},
+    "version": "1.23.2",
+    "libraryName": "docx-editor-sp-fx",
+    "libraryId": "7a537e50-ce5c-40c6-89fe-11ffd128299d",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "DOCXEditorSPFx",
+    "solutionShortDescription": "DOCXEditorSPFx description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

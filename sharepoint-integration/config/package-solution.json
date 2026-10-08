@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "docx-editor-sp-fx-client-side-solution",
+    "id": "7a537e50-ce5c-40c6-89fe-11ffd128299d",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.23.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "DOCXEditorSPFx description"
+      },
+      "longDescription": {
+        "default": "DOCXEditorSPFx description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "docx-editor-sp-fx Feature",
+        "description": "The feature that activates elements of the docx-editor-sp-fx solution.",
+        "id": "9a5de981-4c76-4981-9dd2-594082d52d8b",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/docx-editor-sp-fx.sppkg"
+  }
+}
