@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "docx-editor-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/docxEditor/DocxEditorWebPart.js",
+          "manifest": "./src/webparts/docxEditor/DocxEditorWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "DocxEditorWebPartStrings": "lib/webparts/docxEditor/loc/{locale}.js"
+  }
+}
