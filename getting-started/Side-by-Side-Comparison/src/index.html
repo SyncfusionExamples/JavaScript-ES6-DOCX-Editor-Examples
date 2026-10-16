@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Syncfusion TypeScript Document Editor - Compare Documents</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="description" content="Syncfusion TypeScript DOCX Editor - Side by Side Document Comparison" />
+    <meta name="author" content="Syncfusion" />
+    <link rel="shortcut icon" href="resources/favicon.ico" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="control-pane">
+        <div class="control-section" style="width: 100%;">
+
+            <!-- Shared Container -->
+            <div id="shared-container" style="width: 760px; margin: 10px auto;">
+                <!-- Upload Row -->
+                <div id="upload-row" style="display: flex; gap: 6px;">
+
+                    <!-- Original -->
+                    <div id="original-upload" style="width: 360px; border-radius: 6px; padding: 14px; border: 1px dashed #ccc;">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <span>Original document</span>
+                            <label id="original-choose" style="padding: 4px 10px; border: 1px solid #ccc; border-radius: 4px; cursor: pointer;">
+                                Choose file
+                                <input id="original-input" type="file" style="display: none;" accept=".docx,.sfdt" />
+                            </label>
+                        </div>
+                        <div id="original-info" style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px; font-size: 12px; color: #666;">
+                            <span id="original-info-text">Supported formats: SFDT, DOCX</span>
+                            <span id="original-clear" class="e-icons e-trash" style="display: none; cursor: pointer;" title="Remove file"></span>
+                        </div>
+                    </div>
+
+                    <!-- Revised -->
+                    <div id="revised-upload" style="width: 360px; border-radius: 6px; padding: 14px; border: 1px dashed #ccc;">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <span>Revised document</span>
+                            <label id="revised-choose" style="padding: 4px 10px; border: 1px solid #ccc; border-radius: 4px; cursor: pointer;">
+                                Choose file
+                                <input id="revised-input" type="file" style="display: none;" accept=".docx,.sfdt" />
+                            </label>
+                        </div>
+                        <div id="revised-info" style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px; font-size: 12px; color: #666;">
+                            <span id="revised-info-text">Supported formats: SFDT, DOCX</span>
+                            <span id="revised-clear" class="e-icons e-trash" style="display: none; cursor: pointer;" title="Remove file"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <div id="controls" style="display: flex; justify-content: space-between; align-items: center; margin-top: 12px;">
+                    <div>
+                        <input id="show-result" type="checkbox" checked style="margin-right: 6px;" />
+                        <span>Show comparison results with tracked changes</span>
+                    </div>
+                    <div id="action-buttons" style="display: flex; gap: 10px; margin-right: 32px;">
+                        <button id="compare-btn" class="e-btn e-primary" disabled>Compare</button>
+                        <button id="download-btn" class="e-btn e-outline e-flat e-primary" disabled>
+                            <span class="e-icons e-download"></span>
+                            Downlad Result Document
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Editors -->
+            <div id="editors" style="display: flex; gap: 6px; height: calc(100vh - 180px); padding: 0px 10px;">
+                <!-- Left Editor -->
+                <div id="editor1-container" style="width: 50%; display: flex; flex-direction: column; border: 1px solid #ddd; overflow: hidden;">
+                    <div class="e-de-ctn-title" style="padding: 8px; font-weight: 600;">
+                        Original Document
+                    </div>
+                    <div style="flex: 1;">
+                        <div id="DocumentEditor1"></div>
+                    </div>
+                </div>
+
+                <!-- Right Editor -->
+                <div id="editor2-container" style="width: 50%; display: flex; flex-direction: column; border: 1px solid #ddd; overflow: hidden;">
+                    <div id="right-editor-title" class="e-de-ctn-title" style="display: flex; justify-content: space-between; align-items: center;">
+                        <div id="right-editor-title-text" style="float: left; padding: 8px; font-weight: 600; flex: 1;">
+                            Result Document (with tracked changes)
+                        </div>
+                        <button id="revision-pane-btn" class="e-de-ctn-title" title="Show/Hide Revisions Pane" style="display: none; float: right; font-weight: 400; background: transparent; box-shadow: none; border-color: transparent; border-radius: 0px; color: inherit; font-size: 12px;">
+                            <span class="e-icons e-eye"></span>
+                            <span id="revision-pane-label"> Show Review Pane</span>
+                        </button>
+                    </div>
+                    <div style="flex: 1;">
+                        <div id="DocumentEditor2"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loading Progress -->
+            <div class="overlay" id="popup-overlay"></div>
+            <div id="waiting-popup">
+                <svg class="circular" height="40" width="40">
+                    <circle class="circle-path" cx="25" cy="25" r="20" fill="none" stroke-width="6" stroke-miterlimit="10"></circle>
+                </svg>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
