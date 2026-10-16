@@ -102,7 +102,7 @@ npm run build
 
 <p align="center">
   <img
-    src="images/compare-documents-demo-typescript-docx-editor.png"
+    src="images/compare-documents-demo-typescript-docx-editor.gif"
     alt="TypeScript DOCX Editor Compare Documents Demo"
     width="1000" />
 </p>
