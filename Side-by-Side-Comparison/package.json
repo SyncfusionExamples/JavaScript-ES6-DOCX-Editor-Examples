@@ -33,6 +33,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "@syncfusion/ej2-buttons": "^35.1.37",
     "@syncfusion/ej2-documenteditor": "^35.1.40",
     "@syncfusion/ej2-tailwind3-theme": "^35.1.40"
   }
