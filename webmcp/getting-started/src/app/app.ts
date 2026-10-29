@@ -1,4 +1,4 @@
-import { DocumentEditorContainer, Toolbar, Ribbon, WebMcpToolExecuteEventArgs, WebMcpDocumentEditor } from '@syncfusion/ej2-documenteditor';
+import { DocumentEditorContainer, Toolbar, Ribbon, WebMcpDocumentEditor } from '@syncfusion/ej2-documenteditor';
 
 // Inject required modules
 DocumentEditorContainer.Inject(Toolbar, Ribbon, WebMcpDocumentEditor);
@@ -13,16 +13,7 @@ let container: DocumentEditorContainer = new DocumentEditorContainer({
     height: '590px',
     enableWebMcp: true,
     webMcpSettings: webMcpSettings, // Enable WebMCP tools
-    documentEditorSettings: {
-        showRuler: true,
-        showBookmarks: true,
-    },
-    toolbarMode: 'Ribbon',
-    created: (): void => {
-        container.documentEditor.documentName = 'WebMCP Tool Demo';
-
-        webMcpTools = container.getWebMcpTools();
-    }
+    toolbarMode: 'Ribbon'
 });
 
 // Set service URL for document operations
