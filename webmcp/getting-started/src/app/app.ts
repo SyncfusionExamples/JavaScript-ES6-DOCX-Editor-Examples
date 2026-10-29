@@ -4,7 +4,6 @@ import { DocumentEditorContainer, Toolbar, Ribbon, WebMcpDocumentEditor } from '
 DocumentEditorContainer.Inject(Toolbar, Ribbon, WebMcpDocumentEditor);
 
 // Initialize DocumentEditorContainer with WebMCP enabled
-let webMcpTools: any[] = [];
 let webMcpSettings: any = {
         name: 'container'
     };
