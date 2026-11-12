@@ -1,14 +1,14 @@
 import {
     DocumentEditorContainer,
     Toolbar,
+    Ribbon,
     DocumentEditor,
     FormatType,
     ProtectionType
 } from '@syncfusion/ej2-documenteditor';
-import { ZipArchive } from '@syncfusion/ej2-compression';
 import documentProtectionData from '../resources/data/data-document-protection.json';
 
-DocumentEditorContainer.Inject(Toolbar);
+DocumentEditorContainer.Inject(Toolbar, Ribbon);
 
 /**
  * User roles and their document permissions.
@@ -64,6 +64,7 @@ const users: UserPermission[] = [
 
 const container: DocumentEditorContainer = new DocumentEditorContainer({
     enableToolbar: true,
+    toolbarMode: 'Ribbon',
     height: '590px',
     // Use the following service URL only for demo purposes
     serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
@@ -73,15 +74,7 @@ container.appendTo('#DocumentEditor');
 const documentEditor: DocumentEditor = container.documentEditor;
 let currentUser: UserPermission = users[0];
 
-// region: Load the Adventure Works SFDT document
-// The attached SFDT holds the user-based editable ranges (Nancy's price values)
-// and a ReadOnly protection with hash/salt, so it opens in protected mode by default.
-// The base64 SFDT is unzipped locally with ZipArchive and opened as an SFDT JSON string.
-const archive: ZipArchive = new ZipArchive();
-archive.open(documentProtectionData.sfdt);
-const sfdt: string = new TextDecoder().decode(new Uint8Array(archive.getItem(0).data as ArrayBuffer));
-archive.destroy();
-documentEditor.open(sfdt);
+documentEditor.open(JSON.stringify((<any>documentProtectionData)));
 applyUserPermissions(currentUser);
 // endregion
 
