@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>User based restrict editing and approval workflow - JavaScript DOCX Editor</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="description" content="Sample demonstrating user-based document restrictions and approval workflows with the Syncfusion JavaScript DOCX Editor" />
+    <meta name="author" content="Syncfusion" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="sample-header">
+        <h1>User based restrict editing and approval workflow in JavaScript DOCX Editor</h1>
+        <p>
+            Select a user to switch between role-based editing restrictions: price-only editing with editable
+            ranges, tracked changes review, comments-only review, full editing and read-only with export.
+        </p>
+    </div>
+    <div class="sample-toolbar">
+        <div class="permission-holder">
+            <table class="permission-table">
+                <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>Role</th>
+                        <th>Email</th>
+                        <th>Permissions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nancy</td>
+                        <td>Price Editor</td>
+                        <td>nancy@example.com</td>
+                        <td>Can edit only the price values (marked editable ranges)</td>
+                    </tr>
+                    <tr>
+                        <td>Andrew</td>
+                        <td>Reviewer</td>
+                        <td>andrew@example.com</td>
+                        <td>All edits are tracked; cannot accept/reject revisions</td>
+                    </tr>
+                    <tr>
+                        <td>Steven</td>
+                        <td>Commenter</td>
+                        <td>steven@example.com</td>
+                        <td>Can insert comments only; cannot edit content</td>
+                    </tr>
+                    <tr>
+                        <td>Michael</td>
+                        <td>Editor</td>
+                        <td>michael@example.com</td>
+                        <td>Full editing (approves the tracked changes)</td>
+                    </tr>
+                    <tr>
+                        <td>Laura</td>
+                        <td>Viewer</td>
+                        <td>laura@example.com</td>
+                        <td>Read-only; can export as DOCX and PDF only</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="sample-toolbar">
+        <label for="userSelect">Signed in user:</label>
+        <select id="userSelect" title="Choose the user whose permissions are applied"></select>
+        <span id="permissionBanner" class="permission-banner"></span>
+        <span class="toolbar-spacer"></span>
+        <button id="exportDocx" class="export-button" title="Export as Word document (*.docx)">Export as DOCX</button>
+        <button id="exportPdf" class="export-button" title="Export as PDF">Export as PDF</button>
+    </div>
+    <div class="sample-content">
+        <div class="editor-holder">
+            <!-- Element which will render as Document Editor -->
+            <div id="DocumentEditor"></div>
+        </div>
+    </div>
+</body>
+</html>
