@@ -76,9 +76,7 @@ let currentUser: UserPermission = users[0];
 
 documentEditor.open(JSON.stringify((<any>documentProtectionData)));
 applyUserPermissions(currentUser);
-// endregion
 
-// region: User selection dropdown and permissions table
 const userSelect: HTMLSelectElement = document.getElementById('userSelect') as HTMLSelectElement;
 users.forEach(function (user: UserPermission): void {
     const option: HTMLOptionElement = document.createElement('option');
@@ -96,9 +94,7 @@ userSelect.addEventListener('change', function (): void {
         applyUserPermissions(currentUser);
     }
 });
-// endregion
 
-// region: Apply per-user protection and restrictions
 /**
  * Enforces the document protection for the selected user.
  * The Document Editor checks `documentHelper.isDocumentProtected` along with
@@ -113,9 +109,7 @@ function applyUserPermissions(user: UserPermission): void {
     // Reset read-only restriction of the container (used for Laura)
     documentEditor.isReadOnly = false;
     documentEditor.currentUser = user.email;
-    if (user.protectionType === 'NoProtection') {
-        // Michael: full editing, no protection applied
-    } else {
+    if (user.protectionType !== 'NoProtection') {
         // Enforces ReadOnly, RevisionsOnly or CommentsOnly without a password
         documentEditor.editorModule.enforceProtection('', user.protectionType);
     }
@@ -128,9 +122,7 @@ function applyUserPermissions(user: UserPermission): void {
     documentEditor.documentHelper.restrictEditingPane.showHideRestrictPane(false);
     updatePermissionBanner(user);
 }
-// endregion
 
-// region: Approval workflow - block accept/reject revisions for Andrew
 /**
  * Andrew works in `RevisionsOnly` protection: every edit is tracked, but the
  * built-in accept/reject actions are blocked, so a reviewer with approval
@@ -142,9 +134,7 @@ documentEditor.beforeAcceptRejectChanges = function (args: any): void {
         args.cancel = true;
     }
 };
-// endregion
 
-// region: Export DOCX and PDF (Laura's permissions)
 /**
  * Exports the current document content as PDF through the online demo web
  * service `Export` action.
@@ -188,13 +178,10 @@ const exportPdfButton: HTMLButtonElement = document.getElementById('exportPdf') 
 exportPdfButton.addEventListener('click', function (): void {
     formatSave('Pdf');
 });
-// endregion
 
-// region: Permission details panel
 function updatePermissionBanner(user: UserPermission): void {
     const banner: HTMLElement | null = document.getElementById('permissionBanner');
     if (banner) {
         banner.textContent = 'Signed in as ' + user.name + ' (' + user.email + ') - ' + user.role;
     }
 }
-// endregion

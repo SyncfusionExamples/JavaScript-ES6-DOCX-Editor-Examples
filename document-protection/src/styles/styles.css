@@ -85,19 +85,8 @@ body {
 }
 
 .permission-holder {
-    width: 320px;
-    padding: 16px;
-    background-color: #ffffff;
-    border-left: 1px solid #e0e0e0;
-    min-height: 560px;
-    box-sizing: border-box;
-}
-
-.permission-holder h4 {
-    margin: 0 0 12px;
-    font-size: 15px;
-    font-weight: 600;
-    color: #1a202c;
+    flex: 1;
+    padding: 0;
 }
 
 .permission-table {
@@ -108,7 +97,7 @@ body {
 
 .permission-table th,
 .permission-table td {
-    padding: 8px 6px;
+    padding: 6px 8px;
     border: 1px solid #e0e0e0;
     text-align: left;
     vertical-align: top;
@@ -120,6 +109,6 @@ body {
     color: #1a202c;
 }
 
-.permission-table td:nth-child(2) {
+.permission-table td:nth-child(3) {
     word-break: break-all;
 }
