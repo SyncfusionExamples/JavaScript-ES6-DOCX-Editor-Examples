@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This repository contains a TypeScript sample that demonstrates how to compare two Word documents side-by-side using the Syncfusion<sup style="font-size:70%">&reg;</sup> [JavaScript (ES6) DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor?utm_source=github&utm_medium=listing&utm_campaign=github-github-documenteditor-examples) (Document Editor). The sample lets users upload an original and a revised document, compare them through the Document Editor web service, and review the result with revision tracking – all inside two side-by-side editors.
+This sample contains a TypeScript sample that demonstrates how to compare two Word documents side-by-side using the Syncfusion<sup style="font-size:70%">&reg;</sup> [JavaScript (ES6) DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor?utm_source=github&utm_medium=listing&utm_campaign=github-github-documenteditor-examples) (Document Editor). The sample lets users upload an original and a revised document, compare them through the Document Editor web service, and review the result with revision tracking – all inside two side-by-side editors.
 
 ### Features
 
@@ -148,37 +148,3 @@ TypeScript DOCX Editor
         ├── Left Editor  → Original
         └── Right Editor → Compared / Revised
 ```
-
----
-
-# Project Files
-
-| Path | Description |
-|------|-------------|
-| `src/app/app.ts` | Main TypeScript entry point that wires up the two editors and the compare UI. |
-| `src/index.html` | Application HTML host. |
-| `src/styles/styles.css` | Styles for the editor toolbar, upload controls, and loading overlay. |
-| `src/resources/favicon.ico` | Application favicon. |
-| `webpack.config.js` | Webpack 5 configuration used by `npm start` and `npm run build`. |
-| `tsconfig.json` | TypeScript compiler options. |
-| `package.json` | npm metadata and scripts. |
-
----
-
-# Resources
-
-- **Product page:**   [Syncfusion® JavaScript (ES6) DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor?utm_source=github&utm_medium=listing&utm_campaign=github-github-documenteditor-examples) 
-
-- **Documentation:**   [Syncfusion® JavaScript (ES6) DOCX Editor - Documentation](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es6/overview?utm_source=github&utm_medium=listing&utm_campaign=github-github-documenteditor-examples) 
-
-- **Online demo:**   [Syncfusion® JavaScript (ES6) DOCX Editor - Online demo](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/default.html?utm_source=github&utm_medium=listing&utm_campaign=github-github-documenteditor-examples) 
-
-# Support and feedback 
-
-For any other queries, reach our [Syncfusion® support team](https://support.syncfusion.com/?utm_source=github&utm_medium=listing&utm_campaign=github-github-documenteditor-examples) or post the queries through the [community forums](https://www.syncfusion.com/forums?utm_source=github&utm_medium=listing&utm_campaign=github-github-documenteditor-examples). 
-
-Request new feature through [Syncfusion® feedback portal](https://www.syncfusion.com/feedback?utm_source=github&utm_medium=listing&utm_campaign=github-github-documenteditor-examples). 
-
-# License
-
-This is a commercial product and requires a paid license for possession or use. Syncfusion's licensed software, including this component, is subject to the terms and conditions of [Syncfusion's EULA](https://www.syncfusion.com/license/studio/syncfusion_essential_studio_eula.pdf?utm_source=github&utm_medium=listing&utm_campaign=github-github-documenteditor-examples). You can purchase a license [here](https://www.syncfusion.com/sales/products?utm_source=github&utm_medium=listing&utm_campaign=github-github-documenteditor-examples) or start a free 30-day trial [here](https://www.syncfusion.com/account/manage-trials/start-trials?utm_source=github&utm_medium=listing&utm_campaign=github-github-documenteditor-examples).
