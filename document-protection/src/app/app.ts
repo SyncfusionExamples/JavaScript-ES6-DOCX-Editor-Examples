@@ -3,7 +3,6 @@ import {
     Toolbar,
     Ribbon,
     DocumentEditor,
-    FormatType,
     ProtectionType
 } from '@syncfusion/ej2-documenteditor';
 import documentProtectionData from '../resources/data/data-document-protection.json';
@@ -58,7 +57,7 @@ const users: UserPermission[] = [
         email: 'laura@example.com',
         role: 'Viewer',
         protectionType: 'ReadOnly',
-        description: 'Read-only access; can export the document as DOCX and PDF only'
+        description: 'Read-only access to the document'
     }
 ];
 
@@ -114,7 +113,7 @@ function applyUserPermissions(user: UserPermission): void {
         documentEditor.editorModule.enforceProtection('', user.protectionType);
     }
     if (user.email === 'laura@example.com') {
-        // Laura: read-only access, only DOCX and PDF export from custom buttons
+        // Laura: read-only access to the document
         documentEditor.isReadOnly = true;
     }
     // Close the built-in restrict editing pane; the sample shows the effective
@@ -134,50 +133,6 @@ documentEditor.beforeAcceptRejectChanges = function (args: any): void {
         args.cancel = true;
     }
 };
-
-/**
- * Exports the current document content as PDF through the online demo web
- * service `Export` action.
- */
-function formatSave(format: string): void {
-    const http: XMLHttpRequest = new XMLHttpRequest();
-    http.open('POST', documentEditor.serviceUrl + 'Export');
-    http.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
-    http.responseType = 'blob';
-
-    const sfdt: object = {
-        Content: documentEditor.serialize(),
-        Filename: 'Adventure Works Cycles',
-        Format: '.' + format
-    };
-
-    http.onload = function (): void {
-        if (http.status === 200) {
-            const blobUrl: string = URL.createObjectURL(http.response);
-            const downloadLink: HTMLAnchorElement = document.createElement('a');
-            downloadLink.href = blobUrl;
-            downloadLink.download = 'Adventure Works Cycles.' + format.toLowerCase();
-            document.body.appendChild(downloadLink);
-            downloadLink.click();
-            document.body.removeChild(downloadLink);
-            URL.revokeObjectURL(blobUrl);
-        } else {
-            console.error('Export request failed with status: ' + http.status);
-        }
-    };
-
-    http.send(JSON.stringify(sfdt));
-}
-
-const exportDocxButton: HTMLButtonElement = document.getElementById('exportDocx') as HTMLButtonElement;
-exportDocxButton.addEventListener('click', function (): void {
-    documentEditor.save('Adventure Works Cycles', 'Docx' as FormatType);
-});
-
-const exportPdfButton: HTMLButtonElement = document.getElementById('exportPdf') as HTMLButtonElement;
-exportPdfButton.addEventListener('click', function (): void {
-    formatSave('Pdf');
-});
 
 function updatePermissionBanner(user: UserPermission): void {
     const banner: HTMLElement | null = document.getElementById('permissionBanner');

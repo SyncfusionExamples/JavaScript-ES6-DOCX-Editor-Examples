@@ -8,7 +8,7 @@ This sample demonstrates the user-based document restrictions and approval workf
 * **Andrew** (andrew@example.com) – Reviewer: all edits are tracked as revisions (`RevisionsOnly` protection), and he cannot accept or reject revisions.
 * **Steven** (steven@example.com) – Commenter: can insert comments only (`CommentsOnly` protection) and cannot edit the document content.
 * **Michael** (michael@example.com) – Editor: full editing access on the entire document (no protection applied) and reviews the tracked changes.
-* **Laura** (laura@example.com) – Viewer: read-only access and can export the document as DOCX and PDF only.
+* **Laura** (laura@example.com) – Viewer: read-only access to the document.
 
 Select a user in the dropdown on the right to switch the document restrictions between the roles, and use the table below the dropdown to see each user's permissions at a glance.
 
@@ -20,7 +20,7 @@ Select a user in the dropdown on the right to switch the document restrictions b
    * `CommentsOnly` – for Steven, so he can only add comments.
    * `NoProtection` – for Michael, so he has full editing access.
    * `ReadOnly` – for Nancy (only her editable ranges can be edited) and Laura (no editable ranges, so the document is fully read-only).
-3. For Laura, the container is also set to read-only (`documentEditor.isReadOnly = true`), leaving only the custom **Export as DOCX** and **Export as PDF** buttons available for exporting the document.
+3. For Laura, the container is also set to read-only (`documentEditor.isReadOnly = true`), so the document content cannot be modified.
 4. The approval workflow is demonstrated with the `beforeAcceptRejectChanges` event of the Document Editor: Andrew's accept/reject actions are cancelled, so the tracked changes can only be approved by a user with approval rights (Michael).
 
 ## Project structure
@@ -64,9 +64,9 @@ document-protection/
    * Andrew – type anywhere; the edits appear as tracked changes, and the accept/reject actions are cancelled.
    * Steven – insert comments from the Review tab; editing the content is blocked.
    * Michael – edit and format anywhere, and accept or reject Andrew's revisions.
-   * Laura – the document is read-only; export it as DOCX or PDF using the custom buttons.
+   * Laura – the document is read-only; the content cannot be modified.
 
-> Note: The sample uses the Syncfusion demo web service (`https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/`) only for the PDF export server action. For production, set up your own web service as described in the [web services documentation](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es6/web-services-overview?utm_source=github&utm_medium=listing&utm_campaign=github-javascript-es6-docx-editor-examples).
+> Note: The sample uses the Syncfusion demo web service (`https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/`) for the demo purposes. For production, set up your own web service as described in the [web services documentation](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es6/web-services-overview?utm_source=github&utm_medium=listing&utm_campaign=github-javascript-es6-docx-editor-examples).
 
 # Resources
 

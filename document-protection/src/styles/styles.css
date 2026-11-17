@@ -55,25 +55,6 @@ body {
     color: #5f6b7a;
 }
 
-.toolbar-spacer {
-    flex: 1;
-}
-
-.export-button {
-    height: 30px;
-    padding: 4px 14px;
-    border: 1px solid #006ce7;
-    border-radius: 4px;
-    background-color: #006ce7;
-    color: #ffffff;
-    font-size: 13px;
-    cursor: pointer;
-}
-
-.export-button:hover {
-    background-color: #005bd0;
-}
-
 .sample-content {
     display: flex;
     align-items: flex-start;
